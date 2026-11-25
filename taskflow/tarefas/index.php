@@ -18,7 +18,7 @@ require '../includes/header.php'; ?>
     <form method="get" style="display:flex;gap:10px;align-items:end">
         <div class="field"><label>Filtrar por status</label><select name="status">
                 <option value="">Todos</option><?php foreach (['Pendente', 'Em andamento', 'Concluída'] as $s): ?>
-                    <option <?= $status === $s ? 'selected' : '' ?>><?= $s ?></option><?php endforeach; ?>
+                    <option <?= $status == $s ? 'selected' : '' ?>><?= $s ?></option><?php endforeach; ?>
             </select></div><button class="btn gray">Filtrar</button>
     </form>
     <div class="scroll">
